@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.0.2'
+gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
