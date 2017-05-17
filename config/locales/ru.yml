@@ -24,7 +24,10 @@ ru:
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
+
   thing:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
+
+  are_you_sure: 'Точно удалить вопрос?'
