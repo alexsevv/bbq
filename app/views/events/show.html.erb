@@ -15,11 +15,11 @@
           </div>
 
           <% if current_user_can_edit?(@event) %>
-            <div class="buffer-top">
-              <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %> &nbsp;
+            <div class="buffer-bottom">
+              <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %>
               <%= link_to 'Удалить', event_path(@event), class: 'btn btn-danger',
-              method: :delete, data: {confirm: t('are_you_sure') }  %>
-            </div><br>
+              method: :delete, data: {confirm: t('are_you_sure') } %>
+            </div>
           <% end %>
         </div>
       </div>
