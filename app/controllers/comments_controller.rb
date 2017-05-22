@@ -7,19 +7,19 @@ class CommentsController < ApplicationController
     @new_comment.user = current_user
 
     if @new_comment.save
-      redirect_to @event, notice: I18n.t('contlollers.comments.created')
+      redirect_to @event, notice: I18n.t('controllers.comments.created')
     else
-      render 'events/show', alert: I18n.t('contlollers.comments.error')
+      render 'events/show', alert: I18n.t('controllers.comments.error')
     end
   end
 
   def destroy
-    message = {notice: I18n.t('contlollers.comments.destroyed')}
+    message = {notice: I18n.t('controllers.comments.destroyed')}
 
     if current_user_can_edit?(@comment)
       @comment.destroy!
     else
-      message = {alert: I18n.t('contlollers.comments.error')}
+      message = {alert: I18n.t('controllers.comments.error')}
     end
 
     redirect_to @event, message

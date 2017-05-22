@@ -20,6 +20,9 @@ ru:
       comment:
         user_name: 'Имя'
         body: 'Комментарий'
+    errors:
+      messages:
+        existed_email: 'Используется другим пользователем'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
