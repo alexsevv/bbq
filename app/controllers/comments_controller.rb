@@ -14,8 +14,15 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy
-    redirect_to comments_url, notice: 'Comment was successfully destroyed.'
+    message = {notice: I18n.t('contlollers.comments.destroyed')}
+
+    if current_user_can_edit?(@comment)
+      @comment.destroy!
+    else
+      message = {alert: I18n.t('contlollers.comments.error')}
+    end
+
+    redirect_to @event, message
   end
 
   private
