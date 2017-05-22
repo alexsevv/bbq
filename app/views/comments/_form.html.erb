@@ -1,19 +1,8 @@
-<%= form_for [@event, comment] do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: comment} %>
-
-  <div class="form-group">
-    <%= f.label :body %>
-    <%= f.text_area :body, class: 'form-control' %>
-  </div>
-
+<%= simple_form_for [@event, comment] do |f| %>
   <% unless user_signed_in? %>
-    <div class="form-group">
-      <%= f.label :user_name %>
-      <%= f.text_field :user_name, class: 'form-control' %>
-    </div>
+    <%= f.input :user_name, placeholder: 'Ваше имя' %>
   <% end %>
+  <%= f.input :body, placeholder: 'текст комментария' %>
+  <%= f.button :submit, 'Отправить', class: 'btn btn-primary' %>
 
-  <div class="actions">
-    <%= f.submit 'Отправить', class: 'btn btn-primary' %>
-  </div>
 <% end %>

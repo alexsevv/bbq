@@ -13,6 +13,7 @@ gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'uglifier'
 gem 'jquery-rails'
+gem 'simple_form'
 
 group :production do
   gem 'pg'
