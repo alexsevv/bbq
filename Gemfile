@@ -15,6 +15,10 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'simple_form'
 
+#для загрузки и обработки изображений
+gem 'carrierwave', '~> 1.0'
+gem 'rmagick'
+
 group :production do
   gem 'pg'
 end

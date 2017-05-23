@@ -3,10 +3,14 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      subscription: 'Подписка'
+      comment: 'Комментарий'
+      photo: 'Фотография'
     attributes:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: 'Аватарка'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -20,9 +24,12 @@ ru:
       comment:
         user_name: 'Имя'
         body: 'Комментарий'
+      photo:
+        photo: "Фотография"
     errors:
       messages:
         existed_email: 'Используется другим пользователем'
+        extension_whitelist_error: 'Неверный формат файла'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -41,6 +48,10 @@ ru:
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
       own: 'Вы не можете подписаться на свое событие'
+    photos:
+      destroyed: 'Вы удалили фотографию'
+      created: 'Вы добавили фотографию к событию'
+      error: 'Что-то не так с загружаемой фотографией'
 
   app:
     name: 'Шашлыки'
