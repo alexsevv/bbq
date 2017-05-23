@@ -15,6 +15,9 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'simple_form'
 
+#для загрузки файлов через хероку на амазон
+#gem 'fog-aws'
+
 #для загрузки и обработки изображений
 gem 'carrierwave', '~> 1.0'
 gem 'rmagick'
