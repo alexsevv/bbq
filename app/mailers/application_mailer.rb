@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  # обратный адрес всех писем по умолчанию
+  default from: "alexmyror@gmail.com"
   layout 'mailer'
 end
