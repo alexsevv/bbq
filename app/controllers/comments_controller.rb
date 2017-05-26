@@ -42,7 +42,11 @@ class CommentsController < ApplicationController
   end
 
   def notify_subscribers(event, comment)
-    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [current_user.email]).uniq
+    if current_user.present?
+      all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [current_user.email]).uniq
+    else
+      all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
+    end
       # XXX: Этот метод может выполняться долго из-за большого числа подписчиков
       # поэтому в реальных приложениях такие вещи надо выносить в background задачи!
     all_emails.each do |mail|
