@@ -1,5 +1,5 @@
 <h1><%= t '.title' %></h1>
-<p><img src="<%= @photo.photo %>"></p>
+<p><a href="<%= @photo.photo.url %>"><img src="<%= @photo.photo.thumb.url %>"></a></p>
 <p><%= t '.author' %>: <strong><%= @photo.user.name %></strong></p>
 
 <hr/>
@@ -12,3 +12,7 @@
 
 <%= t '.owner' %>
 <h4><%= @event.user.name %></h4>
+
+
+
+
