@@ -1,0 +1,15 @@
+<h2><%= t(".forgot_your_password") %></h2>
+
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+  <div class="row">
+    <div class="col-md-6 buffer-top">
+      <%= f.input :email, required: true, autofocus: true %>
+      <%= f.button :submit, t(".send_me_reset_password_instructions") %>
+    </div>
+  </div>
+<% end %>
+
+<div class="buffer-both">
+  <%= render "devise/shared/links" %>
+</div>
