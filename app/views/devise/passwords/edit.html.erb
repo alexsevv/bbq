@@ -6,7 +6,7 @@
   <%= f.input :reset_password_token, as: :hidden %>
   <%= f.full_error :reset_password_token %>
   <div class="row">
-    <div class="col-md-6 buffer-top">
+    <div class="col-md-4 buffer-top">
       <%= f.input :password, label: t(".new_password"), required: true, autofocus: true %>
       <%= f.input :password_confirmation, label: t(".confirm_new_password"), required: true %>
       <%= f.button :submit, t(".change_my_password") %>
