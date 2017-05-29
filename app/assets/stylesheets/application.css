@@ -60,3 +60,17 @@
   height: 200px;
   width: 100%;
 }
+
+.comment-date{
+  font-size: 0.8em;
+  color: silver;
+}
+
+.padding-left-right{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.border_radius{
+  border-radius: 5px;
+}

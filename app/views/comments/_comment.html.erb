@@ -1,4 +1,4 @@
-<div class="buffer-bottom">
+<div class="buffer-bottom bg-info padding-left-right border_radius">
   <p><%= comment.body %></p>
   <p>
     <span>
@@ -8,7 +8,7 @@
         <em><strong><%= comment.user_name %></strong></em>
       <% end %>
     </span>
-    <em><%= l comment.created_at, format: :long %></em>
+    <em class="comment-date"><%= l comment.created_at, format: :long %></em>
     <% if current_user_can_edit?(comment) %>
       <%= link_to(
         fa_icon('trash'), event_comment_path(comment.event, comment),
