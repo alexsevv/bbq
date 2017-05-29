@@ -34,7 +34,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="event-photos">
-        <div class="event-photos-gallery">
+        <div class="event-photos-gallery buffer-both">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
         <div class="event-photo-form">
