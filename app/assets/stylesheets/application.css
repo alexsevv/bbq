@@ -63,12 +63,14 @@
 
 .comment-date{
   font-size: 0.8em;
-  color: silver;
+  color: #ff8268cc;
 }
 
 .padding-left-right{
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  padding-top: 3px;
 }
 
 .border_radius{
